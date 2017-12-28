@@ -1,0 +1,12 @@
+<div id="upload" ng-controller="uploadCtrl">
+  <h4>UPLOAD A PICTURE</h4>
+
+  <form id="uploadform" ng-submit="submit()">
+
+    <input ng-model="file" type="file" name="file">
+    <input ng-model="username" ng-reqired = "required" type="text" name="username" value="" placeholder="username">
+    <input ng-model="title" ng-reqired = "required" type="text" name="title" value="" placeholder="title">
+    <input ng-model="description" ng-reqired = "required" type="text" name="description" value="" placeholder="description">
+    <button type="submit">UPLOAD NOW!</button>
+  </form>
+</div>

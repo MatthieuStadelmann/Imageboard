@@ -1,0 +1,23 @@
+<div class="singleImageWrapper">
+    <div class="imageBox">
+      <img src="{{image}}">
+    </div>
+    <div class="submitcomment" ng-controller="submitCommentCtrl">
+      <h4>Submit a comment</h4>
+      <form class="commentForm" ng-submit="submit()">
+        <input ng-model="author" ng-required="required" type="text" name="author" value="" placeholder="Your name">
+        <textarea ng-model="comment" ng-required="required"  type="comment" name="comment"></textarea>
+        <button type="upldcmt">Submit your comment!</button>
+      </form>
+      <div class="comments">
+        <li ng-repeat="comment in comments | limitTo: limit">
+          <div class="comments">
+            <p><q>{{comment.comment}}</q>, <i>from</i> {{comment.author}} <i>posted on </i> {{comment.created_at}}</p>
+          </div>
+        </li>
+        </ul>
+        <button ng-click="loadMore()">More</button>
+      </div>
+    </div>
+
+</div>

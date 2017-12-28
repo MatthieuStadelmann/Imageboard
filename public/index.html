@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Image Board</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="/script.js"></script>
+  <script src="/routes.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <header>
+    <h1>PHOTOGRAPHY SHARING</h1>
+  </header>
+  <nav>
+    <div id="nav">
+      <ul>
+        <li class="nav"><a ui-sref="home">Home</a></li>
+        <li class="nav"><a ui-sref="about">About</a></li>
+        <li class="nav"><a ui-sref="upload">Upload</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div ui-view="home"></div>
+
+</body>
+
+</html>
